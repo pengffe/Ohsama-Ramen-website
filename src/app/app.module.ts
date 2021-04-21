@@ -10,6 +10,7 @@ import { MainComponent } from './main/main.component';
 import { StoryComponent } from './story/story.component';
 import { MenuComponent } from './menu/menu.component';
 import { ContactComponent } from './contact/contact.component';
+import { NavigationItemsComponent } from './header/navigation-items/navigation-items.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ContactComponent } from './contact/contact.component';
     MainComponent,
     StoryComponent,
     MenuComponent,
-    ContactComponent
+    ContactComponent,
+    NavigationItemsComponent
   ],
   imports: [
     AppRoutingModule,

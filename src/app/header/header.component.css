@@ -59,60 +59,45 @@
   }
 }
 
-/************* Header Nav ****************/
+/************* sideDrawer ****************/
 .main-nav{
+  display: inline-block;
   float: right;
-  display: inline-block;
-}
-
-.main-nav__items{
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-flow: row;
-  height: 100%;
-}
-
-.main-nav__item{
-  padding: 28px 20px;
-  margin: 0px;
-  color: white;
-  display: inline-block;
-}
-
-.main-nav__item a{
-  font-weight: lighter;
-  color: white;
 }
 
 @media (max-width: 800px) {
-  .main-nav__item{
-    width: 190px;
-    background-color: #24436e;
-  }
-  .main-nav__items{
-    flex-flow: column;
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    z-index: 200;
-    transition: transform 0.5s ease-out;
-  }
-  .Open{
-    transform: translateX(0);
-  }
-
-  .Close{
-    transform: translateX(-100%);
-    /*display: none;*/
+  .main-nav{
+    display: none;
   }
 }
 
-.main-nav__item--cta {
-  font-weight: bold;
-  background-color: #b42424;
+/************* sideDrawer ****************/
+.sideDrawer{
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 200;
+  transition: transform 0.5s ease-out;
 }
+
+@media(min-width: 800px) {
+  .sideDrawer{
+    display: none;
+  }
+}
+
+.Open{
+  transform: translateX(0);
+}
+
+.Close{
+  transform: translateX(-100%);
+  /*display: none;*/
+}
+
+
+
+
 
 
 

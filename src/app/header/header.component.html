@@ -1,34 +1,3 @@
-<!--<nav class="navbar navbar-expand-md bg-dark navbar-dark">-->
-<!--  <div>-->
-<!--    <a routerLink="/" class="">Logo</a>-->
-<!--    <div class=" bg-dark">-->
-<!--      <p>Ohsama Ramen</p>-->
-<!--      <p>王様</p>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--  &lt;!&ndash; Logo &ndash;&gt;-->
-<!--  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar1">-->
-<!--    <span class="navbar-toggler-icon"></span>-->
-<!--  </button>-->
-<!--  &lt;!&ndash; collapse button &ndash;&gt;-->
-<!--  <div class="collpase navbar-collapse" id="collapsibleNavbar1">-->
-<!--    <ul class="main-nav navbar-nav">-->
-<!--      <li class="nav-item main-nav__item">-->
-<!--        <a class="" routerLink="/story">The story of Ohsama</a>-->
-<!--      </li>-->
-<!--      <li class="nav-item main-nav__item">-->
-<!--        <a routerLink="/menu">Menu</a>-->
-<!--      </li>-->
-<!--      <li class="nav-item main-nav__item">-->
-<!--        <a routerLink="/#contact">Contact us</a>-->
-<!--      </li>-->
-<!--      <li class="nav-item main-nav__item">-->
-<!--        <a routerLink="/contact">MAKE A BOOKING</a>-->
-<!--      </li>-->
-<!--    </ul>-->
-<!--  </div>-->
-<!--</nav>-->
-
 <header class="main-header ">
   <div class="main-header__logo">
     <img src="../../assets/logo.png">
@@ -44,24 +13,15 @@
     <div></div>
     <div></div>
   </div>
-  <!-- Drawer toggler -->
+  <!-- sideDrawer toggler -->
 
-  <div class="main-nav" (click)="onClick()">
-    <ul class="main-nav__items {{sideDrawer}} ">
-      <li class="main-nav__item">
-        <a routerLink="/story">The story of Ohsama</a>
-      </li>
-      <li class="main-nav__item">
-        <a routerLink="/menu">Menu</a>
-      </li>
-      <li class="main-nav__item">
-        <a routerLink="/#contact">Contact us</a>
-      </li>
-      <li class="main-nav__item main-nav__item--cta">
-        <a routerLink="/contact">MAKE A BOOKING</a>
-      </li>
-    </ul>
+  <div class="main-nav">
+    <app-navigation-items></app-navigation-items>
   </div>
+  <div class="sideDrawer {{sideDrawer}}" (click)="onClick()">
+    <app-navigation-items></app-navigation-items>
+  </div>
+  <!-- Navigation & SideDrawer -->
 
 </header>
 
