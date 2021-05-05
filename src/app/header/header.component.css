@@ -1,25 +1,34 @@
 .main-header {
   width: 100%;
   height: 80px;
-  background-color: #24436e;
+  background-color: var(--main-theme-color);
+  position: fixed;
+  top: 0;
+  z-index: 100;
 }
 
 /************* Header logo ****************/
 .main-header__logo{
-  margin-left: 20px;
-  padding: 16px;
-  text-align: center;
+  width: 170px;
+  height: 80px;
   display: inline-block;
+  margin-left: 30px;
+  position: relative;
+  top: 6px;
 }
+
 @media(max-width: 800px){
   .main-header__logo{
     float: right;
+    margin-left: 0;
+    padding-right: 10px;
   }
 }
+
 .main-header img{
-  width: 50px;
-  height: 50px;
-  margin: 0px 10px;
+  width: 100%;
+  height: 100%;
+  /*margin: 0 10px;*/
   display: inline-block;
 }
 
@@ -29,10 +38,10 @@
   display: inline-block;
 }
 .main-header__name p{
-  margin: 0px;
+  margin: 0;
 }
 
-/************* toggle button ****************/
+/*************** toggle button ****************/
 .toggle{
   width: 65px;
   height: 60%;
@@ -46,7 +55,7 @@
   float: left;
   border: solid grey 1px;
   border-radius: 4px;
-  margin: 15px;
+  margin: 15px 0 15px 15px;
 }
 .toggle div {
   width: 80%;
@@ -59,7 +68,7 @@
   }
 }
 
-/************* sideDrawer ****************/
+/************* main navigation ****************/
 .main-nav{
   display: inline-block;
   float: right;
@@ -71,11 +80,12 @@
   }
 }
 
-/************* sideDrawer ****************/
+/**************** sideDrawer *****************/
 .sideDrawer{
+  height: 100%;
   position: fixed;
   left: 0px;
-  top: 0px;
+  top: 80px;
   z-index: 200;
   transition: transform 0.5s ease-out;
 }
@@ -92,7 +102,6 @@
 
 .Close{
   transform: translateX(-100%);
-  /*display: none;*/
 }
 
 

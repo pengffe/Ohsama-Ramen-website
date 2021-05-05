@@ -1,9 +1,53 @@
 .story{
+  padding-top: 80px;
+}
+
+h1{
+  font-family: var(--main-theme-font-family);
+}
+
+.story-header{
   width: 100%;
-  height: 1000px;
-  z-index: -1;
-  background-image: url("./../../assets/main.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+  height: 500px;
   position: relative;
 }
+
+.story-header__label{
+  text-align: center;
+  color: #eee7e7;
+  padding-top: 150px;
+}
+
+.story-header-bg img{
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+}
+
+.story-detail{
+  width: 50%;
+  text-align: left;
+  padding: 40px 0;
+  margin: auto;
+  color: var(--main-theme-color);
+}
+
+.story-img{
+  text-align: center;
+  width: 100%;
+  height: 350px;
+  margin: auto;
+}
+.story-img img{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+

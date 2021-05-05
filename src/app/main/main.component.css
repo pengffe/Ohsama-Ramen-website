@@ -1,6 +1,230 @@
-.main-content{
-  background-image: url("./../../assets/main.png");
+.each-section{
+  width: 100%;
+  height: max-content;
+  /*border: solid 1px red;*/
+}
+
+/********** section1 logo ***********/
+.each-section img{
+  display: block;
+  margin: auto;
+  width: 30%;
+  padding-top: 50px;
+}
+
+#section1{
+  height: 480px;
+  background-image: url("./../../assets/section1_bg.jpg");
+  background-size: cover;
+  z-index: -1;
+}
+
+/********** section2 nav ***********/
+.each-section__sub-section{
+  width: 50%;
+  height: fit-content;
+  box-sizing: border-box;
+  text-align: center;
+  margin: auto;
+}
+.each-section__sub-section img{
+  width: 100%;
+  padding: 0;
+}
+
+.each-section__sub-section p{
+  padding: 0 45px 0 45px;
+}
+
+@media (max-width: 815px) {
+  .each-section__sub-section{
+    height: 252px;
+    overflow: scroll;
+  }
+  .each-section__sub-section img{
+    height: 100%;
+  }
+  .each-section__sub-section p{
+    padding: 0 5px;
+  }
+}
+
+/******* button ******/
+.myBtn{
+  border: none;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+  padding: 7px 70px;
+  margin: 10px 0 10px 0;
+  /*font-weight: bold;*/
+}
+
+@media (max-width: 450px) {
+  .myBtn{
+    padding: 7px 30px;
+  }
+}
+.red{
+  background-color: darkred;
+}
+
+.blue{
+  background-color: midnightblue;
+}
+
+.red:hover{
+  background-color: red;
+}
+.blue:hover{
+  background-color: blue;
+}
+
+/********** section3 featured dishes ***********/
+.each-section__title{
+  margin: auto;
+  text-align: center;
+  height: fit-content;
+  padding: 80px;
+
+  letter-spacing:5px;
+  word-spacing:10px;
+
+  background-image: url("./../../assets/section3_featured-dishes_bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/********** menu ************/
+.each-section__dish-cards{
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-flow: row;
+  padding: 60px 30px;
+  background: #efecec;
+}
+
+.each-section__dish-card{
+  width: 30%;
+  height: 500px;
+  margin: auto;
+  background: white;
+}
+.each-section__dish-card img{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.each-section__dish-card_description{
+  padding: 20px 20px 0 20px;
+}
+
+.each-section__dish-card p{
+  font-size: 11px;
+  color: var(--main-theme-color);
+}
+.each-section__dish-card h6{
+  letter-spacing:2px;
+  word-spacing:5px;
+}
+
+@media (max-width: 800px) {
+  .each-section__dish-cards{
+    flex-flow: column;
+  }
+  .each-section__dish-card{
+    width: 80%;
+    height: max-content;
+    margin-bottom: 30px;
+  }
+}
+
+/********** section4 contact us ***********/
+.each-section__contact {
+  /*margin: auto;*/
+  text-align: center;
+  height: 260px;
+  /*padding: 80px;*/
   position: relative;
+
+  letter-spacing:5px;
+  word-spacing:10px;
+
+  /*background-image: url("./../../assets/section4_bg_title.jpg");*/
+  /*background-size: 100%;*/
+  /*background-repeat: no-repeat;*/
+  /*z-index: -1;*/
+}
+.each-section__contact-img img{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+/*any better alternatives?*/
+.each-section__contact-title{
+  margin: auto;
+  padding: 90px 0 40px 0;
+}
+
+/** map and trading hours section **/
+.each-section__contactInfo{
+  width: 100%;
+  height: 550px;
+  background: #efecec;
+  display: flex;
+  flex-flow: row;
+}
+
+.each-section__map{
+  width: 55%;
+  height: 500px;
+  margin: auto;
+}
+
+.each-section__hours{
+  width: 30%;
+  height: 500px;
+  margin: auto;
+  background: white;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.each-section__hours p,
+.each-section__hours h3{
+  margin-bottom: 30px;
+  font-size: 22px;
+
+  letter-spacing:1px;
+  word-spacing:5px;
+}
+.each-section__hours h3{
+  font-size: 32px;
+  color: var(--main-theme-color);
+}
+
+@media (max-width: 600px) {
+  .each-section__contactInfo{
+    flex-flow: column;
+  }
+  .each-section__map,
+  .each-section__hours{
+    width: 100%;
+  }
+
+  .each-section__hours p{
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+}
+
+.remove-margin{
+  margin: 0;
 }

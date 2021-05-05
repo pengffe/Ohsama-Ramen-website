@@ -1,16 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Injectable} from '@angular/core';
 
-@Component({
-  selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css']
-})
-export class MainComponent implements OnInit {
-
-  zoom = 12;
-  center: google.maps.LatLngLiteral;
-  position: {};
-
+@Injectable({providedIn: 'root'})
+export class MenusService {
   menus = [
     {
       label: 'オロチョンラーメン',
@@ -18,7 +9,8 @@ export class MainComponent implements OnInit {
       ingredients: 'Pork and chicken based cloudy colour soup. Added with dried blessings of the mountains and sea, homemade Ramen miso.',
       topping: 'Spicy Orochyon paste/sweet soy porched egg/black fungus/Bok-choy/original tamari soy braised pork belly/ cabbage/ MENMA/ Naruto/ shallot/ roasted sesame',
       price: '24',
-      imagePath: 'assets/section3_menu_miso-ramen.jpg'
+      imagePath: 'assets/section3_menu_miso-ramen.jpg',
+      direction: 'row'
     },
     {
       label: 'スパイシーサーモン丼',
@@ -26,7 +18,8 @@ export class MainComponent implements OnInit {
       ingredients: 'Original Spicy salmon sashimi on top of the sushi rice.',
       topping: 'spicy diced fresh salmon sashimi/ avocado/ cucumber/ basil/ pink ginger/ wasabi Lemon cut (please squeeze)/ shredded nori/sesame',
       price: '24',
-      imagePath: 'assets/section3_menu_salmon-don.jpg'
+      imagePath: 'assets/section3_menu_salmon-don.jpg',
+      direction: 'row-reverse'
     },
     {
       label: 'タスマニア丼/サーモンちらし',
@@ -34,13 +27,15 @@ export class MainComponent implements OnInit {
       ingredients: 'Salmon sashimi on top of the sushi rice. Homemade sweet sashimi soy sauce.',
       topping: 'fresh salmon sashimi/pink ginger/wasabi/ shredded nori/sesame',
       price: '24',
-      imagePath: 'assets/section3_menu_tasmania-don.jpg'
-    }
+      imagePath: 'assets/section3_menu_tasmania-don.jpg',
+      direction: 'row'
+    },
   ];
 
   constructor() { }
 
-  ngOnInit(): void {
+  // tslint:disable-next-line:typedef
+  getMenuList() {
+    return this.menus;
   }
-
 }

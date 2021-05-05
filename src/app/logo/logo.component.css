@@ -1,0 +1,24 @@
+.shop-logo{
+  margin-left: 30%;
+  padding: 0px;
+  text-align: left;
+  /*display: inline-block;*/
+}
+
+.shop-logo__image{
+  width: 50px;
+  height: 50px;
+  margin: 0px 0px;
+  display: inline-block;
+}
+
+.shop-logo__name {
+  color: white;
+  vertical-align: middle;
+  display: inline-block;
+  text-align: center;
+}
+.shop-logo__name p{
+  margin: 0px;
+  padding: 0 5px ;
+}

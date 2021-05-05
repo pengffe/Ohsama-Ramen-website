@@ -1,0 +1,16 @@
+<div class="menu">
+  <div class="menu-header">
+    <div class="menu-header-bg">
+      <img src="assets/section1_bg.jpg">
+    </div>
+  </div>
+  <div class="menu-select">
+      <div routerLinkActive="menu-select__active">
+        <a [routerLink]="['/menu','main-dishes']">Main Dishes</a>
+      </div>
+      <div routerLinkActive="menu-select__active">
+        <a [routerLink]="['/menu','side-dishes']">Side Dishes</a>
+      </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

@@ -1,1 +1,97 @@
-<div class="main-content" id="main"></div>
+<div class="main" id="main">
+  <div style="height: 80px"></div>
+  <div class="each-section" id="section1">
+    <img src="assets/section1_bg_logo.jpg">
+  </div>
+  <!-- logo -->
+
+  <div class="each-section" id="section2">
+    <div class="row remove-margin">
+      <div class="each-section__sub-section">
+        <img src="assets/section2_bg1.jpg">
+      </div>
+      <div class="each-section__sub-section">
+          <h3>Our story</h3>
+          <h3 style="font-family: 'Lobster', cursive;">The story of Ohsama</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <button class="myBtn red" routerLink="/story">Learn  More</button>
+      </div>
+    </div>
+
+    <div class="row remove-margin">
+      <div class="each-section__sub-section">
+        <h3>Menu</h3>
+        <h3 style="font-family: 'Lobster', cursive;">Menu</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button class="myBtn blue" routerLink="/menu">Learn  More</button>
+      </div>
+      <div class="each-section__sub-section">
+        <img src="assets/section2_bg4.jpg">
+      </div>
+    </div>
+  </div>
+  <!-- nav -->
+
+  <div class="each-section" id="section3">
+    <div class="each-section__title">
+      <h1 style="font-family: 'Lobster', cursive;color: white">FEATURED DISHES</h1>
+    </div>
+    <div class="each-section__dish-cards">
+      <div class="each-section__dish-card" *ngFor="let menu of menus">
+        <img src="{{menu.imagePath}}" alt="dish-img">
+        <div class="each-section__dish-card_description">
+          <h6>{{menu.label}}</h6>
+          <h6 style="font-family: 'Lobster', cursive;">{{menu.name}}</h6>
+          <p>{{menu.ingredients}}</p>
+          <h6>TOPPING:</h6>
+          <p>{{menu.topping}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- featured dishes -->
+
+  <div class="each-section" id="contact">
+    <div class="each-section__contact">
+      <div class="each-section__contact-title">
+        <h1 style="font-family: 'Lobster', cursive;color: white">CONTACT US</h1>
+        <button class="myBtn red" routerLink="/contact">Learn  More</button>
+      </div>
+      <div class="each-section__contact-img">
+        <img id="contact-us" src="assets/section4_bg_title.jpg" alt="contact-us">
+      </div>
+    </div>
+<!--    <div class="each-section__contact">-->
+<!--      <div class="each-section__contact-img" id="contact">-->
+<!--        <img id="contact-us" src="assets/section4_bg_title.jpg" alt="contact-us">-->
+<!--      </div>-->
+<!--      <div class="each-section__contact-title">-->
+<!--        <h1 style="font-family: 'Lobster', cursive;color: white">CONTACT US</h1>-->
+<!--        <button class="myBtn red" routerLink="/contact">Learn  More</button>-->
+<!--      </div>-->
+<!--    </div>-->
+    <div class="row each-section__contactInfo remove-margin">
+      <div class="each-section__map">
+        <app-google-map></app-google-map>
+      </div>
+      <div class="each-section__hours">
+        <h3 style="font-family: 'Lobster', cursive;;text-align: left">Trading <br/>Hours</h3>
+        <p id="open">Monday - Saturday<br/>11:30am - 9:00pm</p>
+        <p id="close">Sunday & Public Holiday <br/>Closed</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--<div class="container-fluid">-->
+<!--  <div class="map">-->
+<!--    <google-map-->
+<!--      [zoom]="zoom"-->
+<!--      [center]="center">-->
+<!--      <map-marker-->
+<!--        [position]="position"></map-marker>-->
+<!--    </google-map>-->
+<!--  </div>-->
+<!--</div>-->
+
+

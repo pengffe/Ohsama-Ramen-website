@@ -1,14 +1,14 @@
 <ul class="main-nav__items">
-  <li class="main-nav__item">
+  <li class="main-nav__item" routerLinkActive="active-link">
     <a routerLink="/story">The story of Ohsama</a>
   </li>
-  <li class="main-nav__item">
+  <li class="main-nav__item" routerLinkActive="active-link">
     <a routerLink="/menu">Menu</a>
   </li>
-  <li class="main-nav__item">
-    <a routerLink="/#contact">Contact us</a>
+  <li class="main-nav__item" routerLinkActive="active-link">
+    <a [routerLink]="['/main']" fragment="contact">Contact us</a>
   </li>
-  <li class="main-nav__item main-nav__item--cta">
+  <li class="main-nav__item main-nav__item--cta" routerLinkActive="active-link--cta">
     <a routerLink="/contact">MAKE A BOOKING</a>
   </li>
 </ul>

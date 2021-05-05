@@ -1,0 +1,112 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="map">
+      <app-google-map></app-google-map>
+    </div>
+  </div>
+  <div class="row">
+    <div class="booking-form">
+      <h4 style="text-align: center">CONTACT</h4>
+      <h1 style="font-family: 'Lobster', cursive;text-align: center; color: #24436e">Contact us</h1>
+      <p>Please use the contact form below for inquiries, opinions, thoughts and the like about Ohsama Ramen.
+        <br/> Note: We will respond in a timely manner.</p>
+      <form (ngSubmit)="onSubmit()" #f="ngForm">
+        <div class="form-group">
+          <label for="name">Name *</label>
+          <input
+            class="form-control bold-border"
+            id="name"
+            type="text"
+            ngModel
+            name="name"
+            required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input
+            class="form-control bold-border"
+            id="email"
+            type="email"
+            ngModel
+            name="email"
+            email
+            required
+            #email="ngModel">
+          <span class="blockquote-footer" *ngIf="!email.valid && email.touched">PLEASE ENTER A VALID EMAIL</span>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number *</label>
+          <input
+            class="form-control bold-border"
+            id="phone"
+            type="text"
+            ngModel
+            name="phone"
+            required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea
+            class="form-control bold-border"
+            id="message"
+            rows="4"
+            ngModel
+            name="message">
+    </textarea>
+        </div>
+        <button
+          class="btn btn-info"
+          type="submit"
+          [disabled]="!f.valid"
+        >Booking</button>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="trading-hours">
+      <div class="trading-hours__title">
+        <h3 style="font-family: 'Lobster', cursive;;text-align: center">Trading  Hours</h3>
+      </div>
+      <div class="trading-hours__info">
+        <div class="trading-hours__info-section" id="section1">
+          <p id="open">Monday - Saturday<br/>11:30am - 9:00pm</p>
+        </div>
+        <div class="trading-hours__info-section" id="section2">
+          <p id="close">Sunday & Public Holiday <br/>Closed</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--<form ngForm (ngSubmit)="onSubmit()" #f="ngForm" *ngFor="let form of bookingForms">-->
+<!--  <p class="booking-form__label">{{form.name}}<span *ngIf="form.required"> *</span></p>-->
+<!--  <div [ngSwitch]="form.type" class="form-group">-->
+<!--    <input-->
+<!--      *ngSwitchCase="'text'"-->
+<!--      ngModel-->
+<!--      type="{{form.type}}"-->
+<!--      name="{{form.name}}"-->
+<!--      id="{{form.name}}"-->
+<!--      required="{{form.required}}"-->
+<!--    >-->
+<!--    <input-->
+<!--      ngModel-->
+<!--      type="{{form.type}}"-->
+<!--      name="email"-->
+<!--      required="{{form.required}}"-->
+<!--      email-->
+<!--      #email="ngModel">-->
+<!--    <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid email!</span>-->
+<!--    <textarea-->
+<!--      *ngSwitchCase="'textarea'"-->
+<!--      ngModel-->
+<!--      row="3"-->
+<!--      type="{{form.type}}"-->
+<!--      name="{{form.name}}"-->
+<!--      required="{{form.required}}"-->
+<!--      #message="ngModel"></textarea>-->
+<!--  </div>-->
+<!--</form>-->
