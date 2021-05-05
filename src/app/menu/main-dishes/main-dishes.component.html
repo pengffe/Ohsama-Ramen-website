@@ -1,0 +1,18 @@
+<div class="menu">
+  <div class="menu-title">
+    <h1 style="font-family: 'Lobster', cursive;">Main Dishes</h1>
+    <p>Our soup is made from scratch at all our restaurants in Japan and abroad. <br/>We pay close attention to the ingredients and preparation method.</p>
+  </div>
+  <div class="menu-items" *ngFor="let menu of menus">
+    <div class="menu-item" [ngStyle]="{flexDirection: menu.direction}">
+      <img src="{{menu.imagePath}}" alt="dish-img">
+      <div class="menu-item__description">
+        <h4>{{menu.label}}</h4>
+        <h4 style="font-family: 'Lobster', cursive;">{{menu.name}}</h4>
+        <p>{{menu.ingredients}}</p>
+        <h6>TOPPING:</h6>
+        <p>{{menu.topping}}</p>
+      </div>
+    </div>
+  </div>
+</div>

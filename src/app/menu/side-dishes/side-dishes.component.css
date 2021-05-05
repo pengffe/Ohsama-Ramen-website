@@ -1,0 +1,21 @@
+.side-dishes{
+  width: 70%;
+  padding: 40px 0;
+  margin: auto;
+  text-align: center;
+  color: var(--main-theme-color);
+}
+
+.side-dishes__items{
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  color: black;
+  font-size: 22px;
+  margin: auto;
+}
+
+.side-dishes__items span{
+  font-size: x-small;
+  font-weight: lighter;
+  width: 90%;
+}
