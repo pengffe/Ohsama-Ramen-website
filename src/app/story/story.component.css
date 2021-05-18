@@ -47,6 +47,27 @@ h1{
 }
 
 
+@media (min-width: 1500px) {
+  .story{
+    width: 70vw;
+    margin: auto;
+  }
+}
+
+@media (max-width: 375px) {
+  .story-detail{
+    width: 80%;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+}
+
 
 
 
