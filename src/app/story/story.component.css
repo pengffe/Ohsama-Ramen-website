@@ -16,6 +16,13 @@ h1{
   text-align: center;
   color: #eee7e7;
   padding-top: 150px;
+
+  background-image: url("./../../assets/image/ohsama_Webdesign1.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+
+  height: 450px;
 }
 
 .story-header-bg img{
@@ -35,16 +42,65 @@ h1{
   color: var(--main-theme-color);
 }
 
-.story-img{
-  text-align: center;
-  width: 100%;
-  height: 350px;
+.ohsama_Webdesign10{
+  width: 80%;
+  height: 100px;
   margin: auto;
+
+  background-image: url("./../../assets/image/story/ohsama_Webdesign10.png");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
 }
-.story-img img{
+
+.story-img-display{
+  display: flex;
+  flex-flow: row;
+}
+
+
+.ohsama_Webdesign11{
+  width: 50%;
+  height: 120px;
+  margin: auto;
+
+  background-image: url("./../../assets/image/story/ohsama_Webdesign11.png");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.ohsama_Webdesign12{
+  width: 50%;
+  height: 120px;
+  margin: auto;
+
+  background-image: url("./../../assets/image/story/ohsama_Webdesign12.png");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.ohsama_Webdesign13{
   width: 100%;
-  height: 100%;
+  height: 150px;
+  margin: auto;
+
+  background-image: url("./../../assets/image/story/ohsama_Webdesign13.png");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
 }
+
+/*.story-img{*/
+/*  text-align: center;*/
+/*  width: 100%;*/
+/*  height: 150px;*/
+/*  margin: auto;*/
+/*  display: flex;*/
+/*  flex-flow: row;*/
+/*}*/
+
 
 
 @media (min-width: 1500px) {
@@ -54,7 +110,7 @@ h1{
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 414px) {
   .story-detail{
     width: 80%;
   }
@@ -66,6 +122,15 @@ h1{
     font-size: 1rem;
   }
 
+}
+
+@media (min-width: 415px) {
+  .ohsama_Webdesign10,
+  .ohsama_Webdesign11,
+  .ohsama_Webdesign12,
+  .ohsama_Webdesign13{
+    height: 270px;
+  }
 }
 
 

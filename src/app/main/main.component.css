@@ -109,11 +109,11 @@
   }
 }
 .red{
-  background-color: darkred;
+  background-color: var(--main-red-color);
 }
 
 .blue{
-  background-color: midnightblue;
+  background-color: var(--main-theme-color);
 }
 
 .red:hover{
@@ -220,8 +220,6 @@
     padding: 90px 0 40px 0;
   }
 }
-
-
 
 .each-section__contact-img img{
   width: 100%;
